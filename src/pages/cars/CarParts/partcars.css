@@ -1,0 +1,109 @@
+.box-h1{
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+}
+.index-page .list_ersats_n {
+    border-top: 0;
+}
+.index-page .list_ersats_n.list-ersatz-n--index .expand.list_ersats_row {
+    width: 100%;
+}
+list_ersats_n ul.expand {
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    width: 1116px;
+    margin: 0 auto;
+}
+.list_ersats_n ul {
+    width: 895px;
+    padding: 10px 24px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.list_ersats_n li .item, .list_ersats_n li.active .item {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+.image{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.list_ersats_n li .item {
+    cursor: pointer;
+    border: 1px solid #fff;
+    z-index: 1;
+}
+
+
+.list_ersats_n li .name {
+    padding: 13px 10px 5px;
+    display: block;
+    position: relative;
+    font-size: 12px;
+}
+.popup_ersats{
+    display: none;
+    padding: 30px 30px 5px;
+    text-align: left;
+    z-index: 11;
+    border: 1px solid #dadada;
+    position: relative;
+    background: #fff;
+    width: 1077px;
+    height: auto;
+    margin-top: -1px;
+    box-shadow: 0 2px 4px 0 rgba(50,50,50,.2);
+}
+.white_bot {
+    display: none;
+    width: 221px;
+    height: 15px;
+    position: absolute;
+    top: -8px;
+    z-index: 12;
+    background: #fff;
+    left: 0;
+}
+.popup_ersats ul.list_links {
+    padding: 30px 0 21px;
+    border: none;
+    overflow: hidden;
+    width: 1090px;
+}
+.popup_ersats {
+    display: none;
+    padding: 30px 30px 5px;
+    text-align: left;
+    z-index: 11;
+    border: 1px solid #dadada;
+    position: relative;
+    background: #fff;
+    width: 1077px;
+    height: auto;
+    margin-top: -1px;
+    box-shadow: 0 2px 4px 0 rgba(50,50,50,.2);
+}
+li .popup_ersats ul.list_links li a {
+    display: inline-block;
+}
+.list_ersats_n li .popup_ersats ul.list_links li img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+    float: left;
+}
+.list_ersats_n ul:after {
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 1px;
+    clear: both;
+}

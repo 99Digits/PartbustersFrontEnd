@@ -1,0 +1,33 @@
+.mobilefooter{
+    width: 100%;
+    height: 700px;
+    background-color: #0b141a;;
+}
+.youtubetitle{
+    color: white;
+
+}
+.mobilea{
+    color: #7d8e97;
+}
+.youtubeiframe{
+    padding: 16px;
+}
+.customarservicemobile{
+    width: 100%;
+    height: 200px;
+    background-color: #1f3441;;
+}
+.heading_bottommobile{
+    color: white;
+    text-align: center;
+}
+.footermail{
+    font-size: 11px;
+    color: rgb(231, 205, 205);
+    text-align: center;
+}
+.card-footer{
+    background-color: #1f3441;;
+}
+

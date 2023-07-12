@@ -1,0 +1,58 @@
+@media (max-width: 468px) {
+  .container {
+    width: 100%;
+ 
+  }
+}
+/* .orange{
+    width: 100%;
+    height: 26px;
+    background-color: rgb(253, 120, 11);
+}
+/* .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+ */ 
+  .orange {
+    display: flex;
+    /* justify-content: flex-end; */
+    text-align: center;
+    align-items: center;
+    height: 26px;
+    background-color: -webkit-linear-gradient(top,#ff471a,#ff6700);
+    background-image: linear-gradient(to bottom,#ff471a,#ff6700);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+.icon{
+    color: #e48110
+}
+Nav.Link{
+  color: whitesmoke;
+}
+.header-cart{
+ 
+}
+.main-header{
+
+  
+}
+.navbar-all{
+
+  overflow: hidden;
+  
+}
+@media (max-width: 1268px) {
+  /* div {
+    overflow: hidden;
+  } */
+  .navbar-all{
+
+    overflow: hidden;
+    
+  }
+}

@@ -1,0 +1,17 @@
+.cardlogin{
+    background-color: #e0e3e9;;
+}
+.logbutton{
+   
+    background-color: #888a8f;;
+    color: black;
+}
+.regbutton{
+    background-color: #e0e3e9;;
+    color: black;
+}
+.login-formGroup{
+    padding-left: 5%;
+    margin-top: 2%;
+    padding-right: 5%;
+}
