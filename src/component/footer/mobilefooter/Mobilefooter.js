@@ -46,7 +46,7 @@ function Mobilefooter() {
             <p style={{textAlign:'center',color:'white'}}>Sunday notworking</p>
                     <p className="footermail">partbuster@gmail</p>
                   
-
+{/* hello */}
           </div>
           <Card className='card-footer'>
       <Card.Body>
