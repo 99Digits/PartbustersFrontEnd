@@ -10,7 +10,7 @@ function Header() {
   }, 1000);
   
        
-        console.log(showTime);
+        // console.log(showTime);
       
   return (
     <>
@@ -120,29 +120,29 @@ function Header() {
           <Navbar.Toggle style={{backgroundColor:'white '}} aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto" style={{ textAlign: 'center'}}>
-              <Nav.Link href="truck" style={{color:'white' }}>
+              <Nav.Link href="truck" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-truck-moving icon"></i> Truck parts
               </Nav.Link>
-              <Nav.Link href="#features" style={{color:'white' }}>
+              <Nav.Link href="#features" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-motorcycle icon"></i> MOTOR CYCLE
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-cookie fa-spin icon"></i> Tyres
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-wrench fa-shake icon"></i> Tools
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-screwdriver-wrench icon"></i>
                 <i className="fa-solid fa-car-side fa-fade icon"></i> Car Accessories
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-oil-can icon"></i> Engine Oil
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-filter icon"></i> Filter
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white' }}>
+              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-car-burst icon"></i> Brakes
               </Nav.Link>
             </Nav>

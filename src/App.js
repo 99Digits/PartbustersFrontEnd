@@ -10,6 +10,7 @@ import Truck from './pages/truck/Truck';
 
 
 function App() {
+
   return (
     < >
     <Routes>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import Select from "react-select";
+import "react-dropdown/style.css";
 import {
   Button,
   Card,
@@ -16,8 +17,161 @@ import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 import Topcars from "../footernav/Topcars";
 import Footer from "../../component/footer/Footer";
 import Partscar from "./CarParts/Partscar";
+import Scrool_indicator from "../../component/scrool_indicator/Scrool_indicator";
+import { demoapi } from "../../service/allapi";
+import { CommonRequest } from "../../service/CommonRequest";
+import axios from "axios";
 
 function Cardashboard() {
+  const [demo, setdemo] = useState([]);
+  const [cartitle,setcartitle]=useState([])
+  useEffect(() => {
+    const demofn = async () => {
+      try {
+        const response = await demoapi();
+        console.log(response.data);
+        setdemo(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    demofn();
+  }, []);
+  const [carmodal, setcarmodal] = useState([]);
+
+  //  const carapi=async()=>{
+  //   const headers = {
+  //       'X-RapidAPI-Key': '2093b31d42msh8699915702a2e18p151f23jsn92464a07db83',
+  //       'X-RapidAPI-Host': 'car-data.p.rapidapi.com'
+  //     };
+
+  //     const params = {
+  //       limit: '50',
+  //       page: '0',
+  //       make: selectedOption
+  //     };
+
+  //     const queryString = new URLSearchParams(params).toString();
+  //     const url = `https://car-data.p.rapidapi.com/cars?${queryString}`;
+
+  //     return await CommonRequest('GET', url, headers);
+  //   };
+
+  // car response
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption2, setSelectedOption2] = useState('');
+  const [selectedOption3, setSelectedOption3] = useState('');
+
+  const options = [
+    { value: "MINI", label: "Mini" },
+    { value: "BMW", label: "BMW" },
+    { value: "HONDA", label: "HONDA" },
+    { value: "SUZUKI", label: "SUZUKI" },
+    { value: "BMW", label: "BMW" },
+    { value: "HYUNDAI", label: "HYUNDAI" },
+    { value: "FORD", label: "FORD" },
+    { value: "NISSAN", label: "NISSAN" },
+    { value: "TOYOTA", label: "TOYOTA" },
+    { value: "TESLA", label: "TESLA" },
+  ];
+  const optionsz = carmodal.map((item) => ({
+    value: item.model,
+    label: item.model,
+  }));
+  const optionszz = cartitle.map((item) => ({
+    value: item.type,
+    label: item.type,
+  }));;
+  const handleChange = async(selectedOption) => {
+    setSelectedOption(selectedOption);
+    console.log(selectedOption);
+    const options = {
+      method: "GET",
+      url: "https://car-data.p.rapidapi.com/cars",
+      params: {
+        limit: "50",
+        page: "0",
+        make: selectedOption.value,
+        // model: selectedOption2.value,
+        //  type: selectedOption.value
+      },
+      headers: {
+        "X-RapidAPI-Key": "2093b31d42msh8699915702a2e18p151f23jsn92464a07db83",
+        "X-RapidAPI-Host": "car-data.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setcarmodal(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  
+  };
+  const handleChanges =async (selectedOption2) => {
+    setSelectedOption2(selectedOption2);
+    console.log(selectedOption2);
+    const options = {
+      method: "GET",
+      url: "https://car-data.p.rapidapi.com/cars",
+      params: {
+        limit: "50",
+        page: "0",
+        make: selectedOption.value,
+         model: selectedOption2.value,
+        //  type: selectedOption.value
+      },
+      headers: {
+        "X-RapidAPI-Key": "2093b31d42msh8699915702a2e18p151f23jsn92464a07db83",
+        "X-RapidAPI-Host": "car-data.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setcartitle(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+
+  };
+  const handleChangess =async (selectedOption3) => {
+    setSelectedOption3(selectedOption3);
+    
+  };
+ 
+  const carRes = async () => {
+    const options = {
+      method: "GET",
+      url: "https://car-data.p.rapidapi.com/cars",
+      params: {
+        limit: "50",
+        page: "0",
+        make: selectedOption.value,
+         model: selectedOption2.value,
+        
+      },
+      headers: {
+        "X-RapidAPI-Key": "2093b31d42msh8699915702a2e18p151f23jsn92464a07db83",
+        "X-RapidAPI-Host": "car-data.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setcarmodal(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // { value: carmodal.map((data)=>data.model), label: carmodal.map((data)=>data.model) },
+
   const [modalShow, setModalShow] = React.useState(false);
   const [topcar, settopcar] = useState(true);
   const [carparts, setcarparts] = useState(false);
@@ -58,109 +212,37 @@ function Cardashboard() {
 
                 <Card.Text>
                   {/* 1st drop down */}
-
-                  <Dropdown
-                    style={{ backgroundColor: "white" }}
-                    data-bs-theme="light"
-                  >
-                    <span className="dropnumber">1</span>
-                    <span className="arrow">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <Dropdown.Toggle
-                      id="dropdown-button-dark-example1"
-                      className="form-control selectcar1"
-                      variant="light"
-                    >
-                      BMW
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1" active>
-                        Action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Another action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Something else
-                      </Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-4">
-                        Separated link
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-
+                  <span className="dropnumber">1</span>
+                  <span className="arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>{" "}
+                  <Select
+                    options={options}
+                    value={selectedOption}
+                    onChange={handleChange}
+                  
+                  />
+                  <span className="arrow2 mt-2">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                  <span className="dropnumber2 mt-2">2</span>
+                  <Select
+                    className="mt-2"
+                    options={optionsz}
+                    value={selectedOption2}
+                    onChange={handleChanges}
+                  />
                   {/* 2nd Drop down */}
-                  <Dropdown
-                    style={{ backgroundColor: "white" }}
-                    data-bs-theme="dark"
-                    className="mt-3"
-                  >
-                    <span className="arrow2">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-
-                    <span className="dropnumber2">2</span>
-                    <Dropdown.Toggle
-                      id="dropdown-button-dark-example1"
-                      className="form-control"
-                      variant="light"
-                    >
-                      Dropdown Button
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1" active>
-                        Action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Another action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Something else
-                      </Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-4">
-                        Separated link
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-
+                  <span className="dropnumber mt-2">3</span>{" "}
+                  <Select className="mt-2" options={optionszz}value={selectedOption3} 
+                   />
+                  <span className="arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
                   {/* 3rd dropdown */}
-                  <Dropdown data-bs-theme="dark" className="mt-3">
-                    <span className="dropnumber">3</span>
-                    <span className="arrow">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-
-                    <Dropdown.Toggle
-                      id="dropdown-button-dark-example1"
-                      className="form-control"
-                      variant="light"
-                    >
-                      Dropdown Button
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1" active>
-                        Action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Another action
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Something else
-                      </Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-4">
-                        Separated link
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
                 </Card.Text>
                 <Button
+                onClick={carRes}
                   className="form-control"
                   style={{ backgroundColor: "#0067d7" }}
                 >
@@ -270,52 +352,58 @@ function Cardashboard() {
         {/*   */}
         <Row>
           <h5 className="products-title">YOUR RECENTLY VIEWED ITEMS</h5>
-          <div className="col-lg-2">
-            <div className="products-card">
-              <Card
-                style={{ width: "25rem" }}
-                className="shadow-lg p-3 mb-5 bg-white rounded"
-              >
-                <span className="love">
-                  {" "}
-                  <i class="fa-regular fa-heart"></i>
-                </span>
-                <div className="promotion-discount">-24%</div>
-                <Card.Img
-                  variant="top"
-                  src="https://cdn.autodoc.de/thumb?id=1508741&m=2&n=0&lng=en&ccf=94077840"
-                />
-                <Card.Body>
-                  <Card.Title
-                    style={{
-                      fontSize: "100%",
-                      margin: "0%",
-                      padding: "0%",
-                      border: "0px",
-                      outline: "0%",
-                      verticalAlign: "baseline",
-                      background: "0px",
-                    }}
-                  >
-                    FERODO Brakepadset
-                  </Card.Title>
-                  <Card.Text>
-                    <p className="articlenumber mt-3">Article number: FDB818</p>
-                    <strong>£ 15,41</strong>
-                  </Card.Text>
-                  <Button className="button-products form-control">
+          {demo.map((item) => (
+            // demo Api
+            <div className="col-lg-2">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "300px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
                     {" "}
-                    <strong>
-                      <i class="fa-solid fa-cart-shopping fa-bounce"></i>
-                    </strong>
-                  </Button>
-                </Card.Body>
-              </Card>
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src={item.image}
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+                      {item.title.slice(0, 10)}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
             </div>
-          </div>
+          ))}
 
           {/* 2nd card */}
-          <div className="col-lg-2 ms-2">
+          {/* <div className="col-lg-2 ms-2">
             <div className="products-card">
               <Card
                 style={{ width: "25rem" }}
@@ -357,7 +445,7 @@ function Cardashboard() {
                 </Card.Body>
               </Card>
             </div>
-          </div>
+          </div> */}
         </Row>
 
         {/* nav */}
@@ -486,7 +574,10 @@ function Cardashboard() {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-
+      {/* <div className="scroll-progress-container">
+        <div className="scroll-progress-bar" style={{width:'.70684%;'}}></div>
+      </div> */}
+      <Scrool_indicator />
       <Footer />
     </>
   );

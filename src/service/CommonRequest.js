@@ -4,7 +4,8 @@ export const CommonRequest=async(methods,url,body,header)=>{
         method:methods,
         url,
         data:body,
-        headers:header?header:{"content-type":"application/json"}
+        headers:header?header:{"content-type":"application/json"},
+     
     }
     return axios(config).then((data)=>{
         return data

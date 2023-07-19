@@ -9,3 +9,10 @@ export const userRegister=async(body)=>{
 export const userLogin=async(body)=>{
     return await CommonRequest("POST",`${Base_url}/login`,body)
 }
+export const demoapi=async()=>{
+    return await CommonRequest("GET",`https://fakestoreapi.com/products`)
+}
+
+
+
+

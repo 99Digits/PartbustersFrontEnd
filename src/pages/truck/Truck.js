@@ -1,26 +1,36 @@
-import React, { useState } from 'react'
-import Header from '../../component/Header'
-
-import { Button, Card, Carousel, Dropdown, Form, InputGroup, Row } from 'react-bootstrap'
-import Topcars from '../footernav/Topcars';
-import Partscar from '../cars/CarParts/Partscar';
+import React, { useState } from "react";
+import Header from "../../component/Header";
+import Mobilefooter from "../../component/footer/mobilefooter/Mobilefooter"
+import {
+  Button,
+  Card,
+  Carousel,
+  Dropdown,
+  Form,
+  InputGroup,
+  Row,
+} from "react-bootstrap";
+import Topcars from "../footernav/Topcars";
+import Partscar from "../cars/CarParts/Partscar";
+import Drop from "./tuckfunctionalities/Drop";
+import Drop2 from "./tuckfunctionalities/Drop2";
 function Truck() {
-    const [modalShow, setModalShow] = React.useState(false);
-    const [topcar, settopcar] = useState(true);
-    const [carparts, setcarparts] = useState(false);
-    const allcarnav = () => {
-      // settopcar((prevState)=>!prevState);
-      setcarparts(false);
-      settopcar(true);
-    };
-    const allcarparts = () => {
-      // setcarparts((prevState)=>!prevState);
-      settopcar(false);
-      setcarparts(true);
-    };
+  const [modalShow, setModalShow] = React.useState(false);
+  const [topcar, settopcar] = useState(true);
+  const [carparts, setcarparts] = useState(false);
+  const allcarnav = () => {
+    // settopcar((prevState)=>!prevState);
+    setcarparts(false);
+    settopcar(true);
+  };
+  const allcarparts = () => {
+    // setcarparts((prevState)=>!prevState);
+    settopcar(false);
+    setcarparts(true);
+  };
   return (
     <>
-      <Header/>
+      <Header />
       <div className="container carsall">
         <Row>
           <div className="col-lg-5 col-md-4 col-sm-4">
@@ -37,7 +47,8 @@ function Truck() {
                     &nbsp;
                     <span className="selectcar-title">
                       <strong>
-                      Start your search for spare parts by choosing a commercial vehicle model &nbsp;
+                        Start your search for spare parts by choosing a
+                        commercial vehicle model &nbsp;
                         <i class="fa-solid fa-rotate-right"></i>
                       </strong>
                     </span>
@@ -148,48 +159,55 @@ function Truck() {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Card.Text>
-                <Button
+                {/* <Button
                   className="form-control"
                   style={{ backgroundColor: "#0067d7" }}
                 >
                   <i class="fa-solid fa-magnifying-glass fa-xs"></i> Search
-                </Button>
+                </Button> */}
                 <div className="select-car mt-4"></div>
-                <p className="mt-4 byregnumber">
+                {/* <p className="mt-4 byregnumber">
                   <i class="fa-solid fa-car" style={{ color: "blue" }}></i>{" "}
                   <strong>BY REGISTRATION NUMBER</strong>
-                </p>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text
-                    id="basic-addon1"
-                    style={{ backgroundColor: "#0068d7" }}
-                  >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
-                      alt="img"
-                      style={{ width: "20%", height: "20px" }}
-                    />
-                  </InputGroup.Text>
-                  <Form.Control
-                    style={{ backgroundColor: "#ffe883" }}
-                    placeholder="Your Reg Num"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
-                  <Button
+                </p> */}
+             
+              
+        
+                 
+                <Row>
+                  <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                       <p className="text-center mt-1">Additional Information</p>
+                    <div className="row">
+                      <div className="col-6 mt-3">
+                        <Drop />
+                        <div className="mt-3">
+                          <Drop2 />
+                        </div>
+                      </div>
+
+                      <div className="col-6 mt-3">
+                        <Drop />
+                        <div className="mt-3">
+                          <Drop2 />
+                        </div>
+                      </div>
+                      <div className="col-6 mt-3">
+                        <Drop />
+                        <div className="mt-3"></div>
+                      </div>
+                      <div className="col-6 mt-3">
+                        <Drop />
+                        <div className="mt-3"></div>
+                      </div>
+                    </div>
+                    <Button
                     className="ms-3 form-control"
                     style={{ backgroundColor: "#0067d7" }}
                   >
                     <i class="fa-solid fa-magnifying-glass"></i>Search
                   </Button>
-                </InputGroup>
-                <a
-                  className="selector-find-text"
-                  onClick={() => setModalShow(true)}
-                >
-                  {" "}
-                  CAN’T FIND YOUR CAR IN THE CATALOGUE?
-                </a>
+                  </div>
+                </Row>
               </Card.Body>
             </Card>
           </div>
@@ -256,7 +274,7 @@ function Truck() {
         </Row>
 
         {/*   */}
-        <Row>
+        {/* <Row>
           <h5 className="products-title">YOUR RECENTLY VIEWED ITEMS</h5>
           <div className="col-lg-2">
             <div className="products-card">
@@ -265,7 +283,7 @@ function Truck() {
                 className="shadow-lg p-3 mb-5 bg-white rounded"
               >
                 <span className="love">
-                  {" "}
+             
                   <i class="fa-regular fa-heart"></i>
                 </span>
                 <div className="promotion-discount">-24%</div>
@@ -302,7 +320,7 @@ function Truck() {
             </div>
           </div>
 
-          {/* 2nd card */}
+       
           <div className="col-lg-2 ms-2">
             <div className="products-card">
               <Card
@@ -346,7 +364,7 @@ function Truck() {
               </Card>
             </div>
           </div>
-        </Row>
+        </Row> */}
 
         {/* nav */}
         {/* <Nav className="dark" justify variant="tabs">
@@ -468,9 +486,9 @@ function Truck() {
           <Partscar />
         </div>
       </div>
-
+      <Mobilefooter/>
     </>
-  )
+  );
 }
 
-export default Truck
+export default Truck;
