@@ -30,4 +30,25 @@
 .card-footer{
     background-color: #1f3441;;
 }
+.loginimages{
+    width: 100%;
+    height: 300px;
+}
+.youtubelogo{
+    width: 8%;
+    height: 60px;
+    align-items: center;
+ 
+    margin-left: 50%;
+    justify-content: center;
+    
+}
+@media (min-width: 1000px) {
+    /* Add your styles here for large screens */
+  .loginimages{
+    width: 100%;
+    height: 450px;
+  }
+  }
+
 
