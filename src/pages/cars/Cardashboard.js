@@ -25,17 +25,19 @@ import axios from "axios";
 function Cardashboard() {
   const [demo, setdemo] = useState([]);
   const [cartitle,setcartitle]=useState([])
+  const [demoparts,setdemoparts]=useState([])
+
   useEffect(() => {
-    const demofn = async () => {
-      try {
-        const response = await demoapi();
-        console.log(response.data);
-        setdemo(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    demofn();
+    // const demofn = async () => {
+    //   try {
+    //     const response = await demoapi();
+    //     console.log(response.data);
+    //     setdemo(response.data);
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // };
+    // demofn();
   }, []);
   const [carmodal, setcarmodal] = useState([]);
 
@@ -189,7 +191,7 @@ function Cardashboard() {
     <>
       <div className="container carsall">
         <Row>
-          <div className="col-lg-5 col-md-4 col-sm-4">
+          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12">
             <Card
               style={{ width: "22rem" }}
               className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -213,9 +215,7 @@ function Cardashboard() {
                 <Card.Text>
                   {/* 1st drop down */}
                   <span className="dropnumber">1</span>
-                  <span className="arrow">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </span>{" "}
+                
                   <Select
                     options={options}
                     value={selectedOption}
@@ -236,9 +236,9 @@ function Cardashboard() {
                   <span className="dropnumber mt-2">3</span>{" "}
                   <Select className="mt-2" options={optionszz}value={selectedOption3} 
                    />
-                  <span className="arrow">
+                  {/* <span className="arrow">
                     <i class="fa-solid fa-chevron-down"></i>
-                  </span>
+                  </span> */}
                   {/* 3rd dropdown */}
                 </Card.Text>
                 <Button
@@ -352,12 +352,12 @@ function Cardashboard() {
         {/*   */}
         <Row>
           <h5 className="products-title">YOUR RECENTLY VIEWED ITEMS</h5>
-          {demo.map((item) => (
-            // demo Api
-            <div className="col-lg-2">
+          
+       
+            <div className="col-lg-2 col-sm-4 col-xs-6">
               <div className="products-card">
                 <Card
-                  style={{ width: "25rem", height: "300px" }}
+                  style={{ width: "25rem", height: "400px" }}
                   className="shadow-lg p-3 mb-5 bg-white rounded"
                 >
                   <span className="love">
@@ -368,7 +368,7 @@ function Cardashboard() {
                   <Card.Img
                     variant="top"
                     style={{ height: "30%", width: "80%" }}
-                    src={item.image}
+                    src="https://www.partbusters.com/media/catalog/product/cache/063275b34911a0a4c7a81e6095c993a8/1/0/101-23113-1.jpg"
                   />
                   <Card.Body>
                     <Card.Title
@@ -382,7 +382,8 @@ function Cardashboard() {
                         background: "0px",
                       }}
                     >
-                      {item.title.slice(0, 10)}
+                  Febi BilsteinWasher Pump 23113
+                      {/* {item.title.slice(0, 10)} */}
                     </Card.Title>
                     <Card.Text>
                       <p className="articlenumber mt-3">
@@ -400,8 +401,249 @@ function Cardashboard() {
                 </Card>
               </div>
             </div>
-          ))}
 
+            <div className="col-lg-2 col-sm-4 col-xs-6">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "400px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
+                    {" "}
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src="https://www.partbusters.com/media/catalog/product/cache/063275b34911a0a4c7a81e6095c993a8/3/2/32-3000970127-1.jpg"
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+                      Sachs CLUTCH KIT
+                      {/* {item.title.slice(0, 10)} */}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+            <div className="col-lg-2 col-sm-4 col-xs-6">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "400px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
+                    {" "}
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src="https://www.partbusters.com/media/catalog/product/cache/063275b34911a0a4c7a81e6095c993a8/4/7/475-hk2607-1.jpg"
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+                      BORG & BECK CLUTCH KIT 3-IN-1 HK2607
+                      {/* {item.title.slice(0, 10)} */}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+
+            <div className="col-lg-2 col-sm-4 col-xs-6">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "400px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
+                    {" "}
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src="https://www.partbusters.com/media/catalog/product/cache/063275b34911a0a4c7a81e6095c993a8/4/0/407-fwp3058-1.jpg"
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+              First Line WATER PUMP KIT
+
+                      {/* {item.title.slice(0, 10)} */}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+
+            <div className="col-lg-2 col-sm-4 col-xs-6">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "400px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
+                    {" "}
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src="https://www.partbusters.com/media/catalog/product/cache/063275b34911a0a4c7a81e6095c993a8/3/2/32-3000970127-1.jpg"
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+                     ` Sachs CLUTCH KIT`
+                      {/* {item.title.slice(0, 10)} */}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+
+            <div className="col-lg-2 col-sm-4 col-xs-6">
+              <div className="products-card">
+                <Card
+                  style={{ width: "25rem", height: "400px" }}
+                  className="shadow-lg p-3 mb-5 bg-white rounded"
+                >
+                  <span className="love">
+                    {" "}
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <div className="promotion-discount">-24%</div>
+                  <Card.Img
+                    variant="top"
+                    style={{ height: "30%", width: "80%" }}
+                    src="https://www.partbusters.com/media/catalog/product/cache/1dce474c4eb7ab5f3a59b5eabc8c13f9/1/0/101-26744-1.jpg"
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{
+                        fontSize: "100%",
+                        margin: "0%",
+                        padding: "0%",
+                        border: "0px",
+                        outline: "0%",
+                        verticalAlign: "baseline",
+                        background: "0px",
+                      }}
+                    >
+                    Febi BilsteinWheel Bolt 26744
+                      {/* {item.title.slice(0, 10)} */}
+                    </Card.Title>
+                    <Card.Text>
+                      <p className="articlenumber mt-3">
+                        Article number: FDB818
+                      </p>
+                      <strong>£ 15,41</strong>
+                    </Card.Text>
+                    <Button className="button-products form-control">
+                      {" "}
+                      <strong>
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                      </strong>
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+
+
+                      
           {/* 2nd card */}
           {/* <div className="col-lg-2 ms-2">
             <div className="products-card">
