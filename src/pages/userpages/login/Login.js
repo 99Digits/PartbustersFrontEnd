@@ -105,6 +105,7 @@ console.log(inputdata);
          
           {reg===true? <Register allreg={allreg} />:''}
       </div>
+      <img className='loginimages' src="https://img.freepik.com/free-vector/user-verification-unauthorized-access-prevention-private-account-authentication-cyber-security-people-entering-login-password-safety-measures_335657-3530.jpg?size=626&ext=jpg&uid=R110228866&ga=GA1.2.1208901341.1689751801&semt=ais" alt="gif" />
       <Mobilefooter/>
       <ToastContainer position='top-center'/>
 
