@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../component/Header";
 import Mobilefooter from "../../component/footer/mobilefooter/Mobilefooter"
+
 import {
   Button,
   Card,
@@ -14,6 +15,7 @@ import Topcars from "../footernav/Topcars";
 import Partscar from "../cars/CarParts/Partscar";
 import Drop from "./tuckfunctionalities/Drop";
 import Drop2 from "./tuckfunctionalities/Drop2";
+import Scrool_indicator from "../../component/scrool_indicator/Scrool_indicator";
 function Truck() {
   const [modalShow, setModalShow] = React.useState(false);
   const [topcar, settopcar] = useState(true);
@@ -487,6 +489,7 @@ function Truck() {
         </div>
       </div>
       <Mobilefooter/>
+      <Scrool_indicator/>
     </>
   );
 }

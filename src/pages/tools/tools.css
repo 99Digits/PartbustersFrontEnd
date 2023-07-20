@@ -1,0 +1,37 @@
+.navtools{
+    font-weight: bold;
+     
+}
+.toolspar{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.tracking-in-contract{-webkit-animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.animate__slideOutDown {
+    
+ 
+    text-align: center;
+    justify-content: center;
+  
+    animation: animate__slideOutDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.6s; /* don't forget to set a duration! */
+    padding: 5px;
+  }
+  .tools-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .copen{
+    background-color: rgb(226, 213, 25);
+ 
+  }

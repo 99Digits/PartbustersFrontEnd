@@ -123,26 +123,26 @@ function Header() {
               <Nav.Link href="truck" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-truck-moving icon"></i> Truck parts
               </Nav.Link>
-              <Nav.Link href="#features" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="bikes" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-motorcycle icon"></i> MOTOR CYCLE
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="tyres" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-cookie fa-spin icon"></i> Tyres
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="tools" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-wrench fa-shake icon"></i> Tools
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="/" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-screwdriver-wrench icon"></i>
                 <i className="fa-solid fa-car-side fa-fade icon"></i> Car Accessories
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="engineoil" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-oil-can icon"></i> Engine Oil
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="/" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-filter icon"></i> Filter
               </Nav.Link>
-              <Nav.Link href="#pricing" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="breakes" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-car-burst icon"></i> Brakes
               </Nav.Link>
             </Nav>

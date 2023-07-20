@@ -7,6 +7,11 @@ import Cart from './cart/Cart';
 import Whishlist from './wishlist/wishlistbody/Whishlist';
 import Pagenotfound from './component/pagenotfound/Pagenotfound';
 import Truck from './pages/truck/Truck';
+import Mainbike from './pages/bikes/Mainbike';
+import Tyres from './pages/tyres/Tyres';
+import Tools from './pages/tools/Tools';
+import Engineoil from './pages/engineoil/Engineoil';
+import Breakes from './pages/breakes/Breakes';
 
 
 function App() {
@@ -20,6 +25,12 @@ function App() {
       <Route path='/services/products/wishlist' element={<Whishlist/>}/>
       <Route path='*' element={<Pagenotfound/>}/>
       <Route path='/truck' element={<Truck/>}/>
+      <Route path='/bikes' element={<Mainbike/>}/>
+
+      <Route path='/tyres' element={<Tyres/>}/>
+      <Route path='/tools' element={<Tools/>}/>
+      <Route path='/engineoil' element={<Engineoil/>}/>
+      <Route path='/breakes' element={<Breakes/>}/>
 
 
     </Routes  >
