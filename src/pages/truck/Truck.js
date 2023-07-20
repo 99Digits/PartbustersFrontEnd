@@ -33,7 +33,7 @@ function Truck() {
       <Header />
       <div className="container carsall">
         <Row>
-          <div className="col-lg-5 col-md-4 col-sm-4">
+          <div className="col-lg-5 col-md-4 col-sm-4 searchcar">
             <Card
               style={{ width: "22rem" }}
               className="shadow-lg p-3 mb-5 bg-white rounded"

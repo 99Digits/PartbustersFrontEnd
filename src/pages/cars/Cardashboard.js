@@ -191,7 +191,7 @@ function Cardashboard() {
     <>
       <div className="container carsall">
         <Row>
-          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 searchcar">
             <Card
               style={{ width: "22rem" }}
               className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -234,7 +234,7 @@ function Cardashboard() {
                   />
                   {/* 2nd Drop down */}
                   <span className="dropnumber mt-2">3</span>{" "}
-                  <Select className="mt-2" options={optionszz}value={selectedOption3} 
+                  <Select className="mt-2" options={optionszz}value={selectedOption3} onChange={handleChangess}
                    />
                   {/* <span className="arrow">
                     <i class="fa-solid fa-chevron-down"></i>

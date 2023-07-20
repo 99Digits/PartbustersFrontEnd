@@ -190,3 +190,11 @@ font-size: 13px;
       
     }
   }
+
+
+    .searchcar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
