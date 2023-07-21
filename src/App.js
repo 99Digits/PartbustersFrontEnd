@@ -12,6 +12,7 @@ import Tyres from './pages/tyres/Tyres';
 import Tools from './pages/tools/Tools';
 import Engineoil from './pages/engineoil/Engineoil';
 import Breakes from './pages/breakes/Breakes';
+import Caracc from './pages/caracc/Caracc';
 
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       <Route path='/tools' element={<Tools/>}/>
       <Route path='/engineoil' element={<Engineoil/>}/>
       <Route path='/breakes' element={<Breakes/>}/>
-
+      <Route path='/car-accessories' element={<Caracc/>}/>
+   
 
     </Routes  >
     

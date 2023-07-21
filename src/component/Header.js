@@ -32,7 +32,7 @@ function Header() {
       </Navbar>
 
       <div className="orange">
-      <h6 className='mt-2' style={{color:'whitesmoke',textAlign:'center',marginLeft:'20%',fontWeight:'bold'}}>BIG PRICE CRASH! UP TO 36% OFF<span style={{fontSize:'12px',float:'right'}}>{showTime.toLocaleTimeString()}</span> </h6> 
+      <h6 className='mt-2' style={{color:'whitesmoke',textAlign:'center',marginLeft:'10%',fontWeight:'bold'}}>BIG PRICE CRASH! UP TO 36% OFF<span style={{fontSize:'10px',float:'right'}}>{showTime.toLocaleTimeString()}</span> </h6> 
       </div>
 
       <Navbar style={{ backgroundColor: '#132530' }} variant="dark">
@@ -132,7 +132,7 @@ function Header() {
               <Nav.Link href="tools" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-wrench fa-shake icon"></i> Tools
               </Nav.Link>
-              <Nav.Link href="/" style={{color:'white',padding:'20px' }}>
+              <Nav.Link href="car-accessories" style={{color:'white',padding:'20px' }}>
                 <i className="fa-solid fa-screwdriver-wrench icon"></i>
                 <i className="fa-solid fa-car-side fa-fade icon"></i> Car Accessories
               </Nav.Link>

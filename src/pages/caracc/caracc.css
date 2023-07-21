@@ -1,0 +1,54 @@
+.navtools{
+    font-weight: bold;
+     
+}
+.toolspar{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.tracking-in-contract{-webkit-animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.animate__slideOutDown {
+    
+ 
+    text-align: center;
+    justify-content: center;
+  
+    animation: animate__slideOutDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    padding: 5px;
+  }
+  .tools-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .copens{
+    /* background-color: green; */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+    border: 1px solid rgba(255, 255, 255, 0.49);
+  }
+  .background-image{
+    background-image: url(https://img.freepik.com/free-photo/muscular-car-service-worker-repairing-vehicle_146671-19605.jpg?w=2000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    /* From https://css.glass */
+
+  
+  }

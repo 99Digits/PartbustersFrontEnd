@@ -1,0 +1,51 @@
+.oilheading{
+    text-align: center;
+    font-weight: bold;
+}
+.container-drop{
+    background: #132530;
+    color: #fff;
+    padding: 32px 62px;
+    font-size: 14px;
+    height: 100%;
+    
+}
+.hedingoil{
+    font-weight: bold;
+
+}
+.dropoil-1{
+    font-size: 16px;
+}
+.oil-one{
+ 
+    background: #dddee0;
+}
+.dropoil{
+    padding: 10px;
+}
+.oilselect{
+    color: black;
+   height: auto;
+}
+.oilbutton{
+    background-color: #0067d7;
+    
+}
+.lineoil{
+    width: 1%;
+    padding-right: 44px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: 1px solid #1e2f3a;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.bluecon{
+    background-color: #0067d7;
+    height: 60px;
+}
+.oilpar{
+    font-size: 12px;
+}
