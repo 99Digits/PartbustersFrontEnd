@@ -176,7 +176,7 @@ function Engineoil() {
               
               </div>
             
-                <div className="col-6">
+                <div className="col-8">
                   <h6 className="hedingoil">
                   SELECT ENGINE OIL REQUIREMENTS<i class="fa-solid fa-rotate-right"></i>
                   <br />

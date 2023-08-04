@@ -1,0 +1,27 @@
+.filterheading{
+    font-weight: bold;
+}
+/* .filternav ul{
+   
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+ul ::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: calc(100% - 2px);
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border-radius: 3px;
+} */
+.filterli{
+    text-transform: none;
+
+    align-items: center;
+}

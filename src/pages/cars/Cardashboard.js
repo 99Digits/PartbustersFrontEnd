@@ -298,7 +298,7 @@ function Cardashboard() {
                 />
                 
               </Carousel.Item>
-              <Carousel.Item interval={1500}>
+              <Carousel.Item interval={1000}>
                 <img
                   className="d-block w-100"
                   src="https://cdn.autodoc.de/uploads/construct_banner/17182/atd/81954/banner_image__en.jpg"
@@ -314,18 +314,20 @@ function Cardashboard() {
                 />
        
               </Carousel.Item>
-              <Carousel.Item interval={500}>
+              <Carousel.Item interval={1000}>
+                <img
+                  className="d-block w-100"
+                  src="https://cdn.autodoc.de/uploads/construct_banner/17139/atd/81850/banner_image__en.jpg"
+                  alt="Third slide"
+                />
+       
+              </Carousel.Item>
+              <Carousel.Item interval={1000}>
                 <img
                   className="d-block w-100"
                   src="https://cdn.autodoc.de/uploads/construct_banner/13372/atd/70101/banner_image__en.jpg"
                 />
-                <Carousel.Caption>
-                  <h3>fourth slide label</h3>
-                  <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl
-                    consectetur.
-                  </p>
-                </Carousel.Caption>
+            
               </Carousel.Item>
             </Carousel>
 
